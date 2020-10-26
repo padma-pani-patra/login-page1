@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:login_page1/UI/FadedAnimation.dart';
+
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -22,42 +24,42 @@ class Home extends StatelessWidget {
                     left: 30,
                     width: 80,
                     height: 200,
-                    child:Container(
+                    child:FadeAnimation(1.5, Container(
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage('assets/images/light-1.png'),
                         ),
                       ),
                     )
-                  ),
+                  )),
                   Positioned(
                       left: 140,
                       width: 80,
                       height: 150,
-                      child: Container(
+                      child: FadeAnimation(1.7, Container(
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage('assets/images/light-2.png'),
                             ),
                           ),
                         ),
-
+                      )
                   ),
                   Positioned(
                       top: 40,
                       right: 40,
                       width: 80,
                       height: 150,
-                      child: Container(
+                      child: FadeAnimation(1.9,Container(
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage('assets/images/clock.png'),
                           ),
                         ),
                       )
-                  ),
+                  )),
                   Positioned(
-                      child: Container(
+                      child: FadeAnimation(2.1,Container(
                         margin: EdgeInsets.all(50),
                         child: Center(
                           child: Text(
@@ -69,14 +71,14 @@ class Home extends StatelessWidget {
                             )
                           )
                         ),
-                      )
+                      ))
                   ),
                 ],
               ),
             ),
             Padding(
               padding: EdgeInsets.all(30),
-              child: Column(
+              child: FadeAnimation(2.3, Column(
                 children: [
                   Container(
                     padding: EdgeInsets.all(5),
@@ -147,7 +149,7 @@ class Home extends StatelessWidget {
                     style: TextStyle(color: Color.fromRGBO(143, 148, 251, 1))
                   )
                 ],
-              ),
+              ),)
             )
           ],
         ),
